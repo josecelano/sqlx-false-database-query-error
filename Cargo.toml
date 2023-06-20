@@ -1,0 +1,26 @@
+[package]
+name = "sqlx-false-database-query-error"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+fern = "0.6.2"
+log = "0.4.19"
+sqlx = { version = "0.6", features = [
+    "runtime-tokio-native-tls",
+    "sqlite",
+    "mysql",
+    "migrate",
+    "time",
+] }
+tokio = { version = "1.28", features = [
+    "macros",
+    "io-util",
+    "net",
+    "time",
+    "rt-multi-thread",
+    "fs",
+    "sync",
+    "signal",
+] }
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
